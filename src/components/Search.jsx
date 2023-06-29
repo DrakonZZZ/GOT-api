@@ -1,7 +1,12 @@
-import React from 'react';
+import { useGlobalContext } from '../context';
 
 const Search = () => {
-  return <div>Search</div>;
+  const { setSearchQuery } = useGlobalContext();
+  return (
+    <div>
+      <h1>Search</h1>
+    </div>
+  );
 };
 
 export default Search;

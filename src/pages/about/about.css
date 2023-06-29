@@ -1,0 +1,19 @@
+.about-section {
+    width: var(--smallWidth);
+    max-width: var(--maxWidth);
+    margin: 0 auto;
+}
+
+.about-section p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 2rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.about-section span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
