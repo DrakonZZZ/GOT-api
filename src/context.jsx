@@ -10,6 +10,7 @@ export const GlobalProvider = ({ children }) => {
   const [isloading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('a');
   const [characters, setCharacters] = useState([]);
+  const [filterData, setFilterData] = useState([]);
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -19,6 +20,7 @@ export const GlobalProvider = ({ children }) => {
 
       if (data) {
         setCharacters(data);
+        setFilterData(data);
       } else {
         setCharacters([]);
       }
@@ -44,6 +46,8 @@ export const GlobalProvider = ({ children }) => {
         setIsLoading,
         setSearchQuery,
         setCharacters,
+        filterData,
+        setFilterData,
       }}
     >
       {children}

@@ -31,6 +31,7 @@
 }
 
 body {
+  width: 100vw;
   font-family: "Game of Thrones";
   background: var(--mainBackground);
   line-height: 1.4;
@@ -85,6 +86,7 @@ img {
   background: transparent;
   border-radius: var(--mainBorderRadius);
   display: inline-block;
+  text-align: center;
 }
 
 .btn:hover {
@@ -218,6 +220,11 @@ img {
   padding: 5rem 0;
 }
 
+.character-section {
+  padding: 2rem;
+  transition: all 0.2s ease-in;
+}
+
 .section-title {
   color: var(--primaryColor);
   font-weight: 300;
@@ -269,7 +276,10 @@ img {
 }
 
 .character-footer {
-  padding: 1.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .character-footer h3 .character-footer p {
@@ -277,11 +287,11 @@ img {
 }
 
 .character-footer h4 {
+  color: var(--darkGrey);
   font-size: 0.9rem;
 }
 
 .character-footer h3 {
-  color: var(--darkGrey);
   font-size: 1.2rem;
 }
 
@@ -289,47 +299,40 @@ img {
   color: var(--primaryColor);
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
-  text-align: end;
 }
 
-/* 
-====== 
-Form
-======
-*/
-.search {
-  margin-top: 1rem;
-  padding-bottom: 0;
+/* form  */
+
+.search-section {
+  padding-top: 5rem;
 }
 
-.search-form {
-  width: var(--smallWidth);
+.input-field {
+  max-width: 40vw;
+  height: 3rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primaryColor);
+  border-radius: var(--mainBorderRadius);
   margin: 0 auto;
-  max-width: var(--maxWidth);
-  background: var(--mainWhite);
-  padding: 2rem 2.5rem;
-  text-transform: capitalize;
-  border-radius: var(--mainBorderRadius);
-  box-shadow: var(--lightShadow);
+  color: white;
+  box-shadow: rgba(168, 144, 48, 0.25) 0px 6px 12px -2px, rgba(228, 205, 56, 0.3) 0px 3px 7px -3px;
 }
 
-.form-control label {
-  display: block;
-  margin-bottom: 1.25rem;
-  font-weight: bold;
-  letter-spacing: 0.25rem;
-  color: var(--primaryColor);
-}
-
-.form-control input {
-  width: 100%;
+.search-input {
+  font-family: "Game of Thrones";
+  flex: 1;
+  padding: 1rem;
   border: none;
-  border-color: transparent;
-  background: var(--mainBackground);
-  border-radius: var(--mainBorderRadius);
-  padding: 0.5rem;
-  font-size: 1.2rem;
+  background-color: transparent;
+  outline: none;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--offWhite)
 }
+
 
 /* 
 ====== 

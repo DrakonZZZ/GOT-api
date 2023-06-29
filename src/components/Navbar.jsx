@@ -9,7 +9,6 @@ const Navbar = () => {
     return () => (window.onscroll = null);
   };
 
-  console.log(isScroll);
   return (
     <nav className={isScroll ? 'navbar scrolled' : 'navbar'}>
       <div className="nav-center">
