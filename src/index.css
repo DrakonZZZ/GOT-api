@@ -12,7 +12,7 @@
   --mainGrey: #ececec;
   --darkGrey: #afafaf;
   --mainRed: #bd0303;
-  --mainTransition: all 0.3s linear;
+  --mainTransition: all 0.2s ease-in-out;
   --mainSpacing: 0.3rem;
   --lightShadow: rgba(0, 0, 0, 0.042) 0px 4px 12px;
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
@@ -212,11 +212,7 @@ img {
   color: var(--primaryLightColor);
 }
 
-/* 
-====== 
-Cocktails List 
-======
-*/
+/* character  */
 
 .section {
   padding: 5rem 0;
@@ -234,7 +230,7 @@ Cocktails List
 }
 
 
-.cocktails-center {
+.character-center {
   width: var(--smallWidth);
   margin: 0 auto;
   max-width: var(--fullWidth);
@@ -245,20 +241,15 @@ Cocktails List
 }
 
 @media screen and (min-width: 576px) {
-  .cocktails-center {
+  .character-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
 }
 
-/* 
-====== 
-Cocktail 
-======
-*/
 
-.cocktail {
+.character {
   background: var(--mainWhite);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
   display: grid;
@@ -266,34 +257,39 @@ Cocktail
   border-radius: var(--mainBorderRadius);
 }
 
-.cocktail:hover {
-  box-shadow: var(--darkShadow);
+.character:hover {
+  transform: scale(1.02);
 }
 
-.cocktail img {
+.character img {
   height: 20rem;
   object-fit: cover;
   border-top-left-radius: var(--mainBorderRadius);
   border-top-right-radius: var(--mainBorderRadius);
 }
 
-.cocktail-footer {
+.character-footer {
   padding: 1.5rem;
 }
 
-.cocktail-footer h3,
-.cocktail-footer h4,
-.cocktail-footer p {
+.character-footer h3 .character-footer p {
   margin-bottom: 0.3rem;
 }
 
-.cocktail-footer h3 {
-  font-size: 2rem;
+.character-footer h4 {
+  font-size: 0.9rem;
 }
 
-.cocktail-footer p {
+.character-footer h3 {
   color: var(--darkGrey);
+  font-size: 1.2rem;
+}
+
+.character-footer p {
+  color: var(--primaryColor);
+  font-size: 0.8rem;
   margin-bottom: 0.5rem;
+  text-align: end;
 }
 
 /* 

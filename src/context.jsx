@@ -15,8 +15,19 @@ export const GlobalProvider = ({ children }) => {
     setIsLoading(true);
     try {
       const resData = await axios(url);
-      console.log(resData);
-    } catch (error) {}
+      const { data } = resData;
+
+      if (data) {
+        setCharacters(data);
+      } else {
+        setCharacters([]);
+      }
+
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      throw new Error(error);
+    }
   };
 
   useEffect(() => {
