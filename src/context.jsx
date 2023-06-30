@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const url = 'https://thronesapi.com/api/v2/Characters';

@@ -1,8 +1,10 @@
+import { useParams } from 'react-router-dom';
 import Loading from '../../components/Loading';
 import { useEffect, useState } from 'react';
 import './detail.css';
 
 const Detail = () => {
+  const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [character, setCharacter] = useState(null);
   const url = 'https://thronesapi.com/api/v2/Characters/';
