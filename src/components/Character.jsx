@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
 
-const Chracter = (data) => {
+const Character = (data) => {
   return (
     <article className="character">
       <div className="img-container">
-        <img src={data.imageUrl} alt={data.firstName} />
+        <img src={data.imageUrl} alt={data.firstName} loading="lazy" />
       </div>
       <div className="character-footer">
         <h3>{data.fullName}</h3>
@@ -21,4 +21,4 @@ const Chracter = (data) => {
   );
 };
 
-export default Chracter;
+export default Character;

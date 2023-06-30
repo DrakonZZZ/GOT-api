@@ -1,5 +1,5 @@
 import { useGlobalContext } from '../context';
-import Character from './Chracter';
+import Character from './Character';
 import Loading from './Loading';
 
 const CharacterList = () => {

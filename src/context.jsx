@@ -15,12 +15,12 @@ export const GlobalProvider = ({ children }) => {
   const fetchData = async () => {
     setIsLoading(true);
     try {
-      const resData = await axios(url);
-      const { data } = resData;
+      const resData = await fetch(url);
+      const parsedData = await resData.json();
 
-      if (data) {
-        setCharacters(data);
-        setFilterData(data);
+      if (parsedData) {
+        setCharacters(parsedData);
+        setFilterData(parsedData);
       } else {
         setCharacters([]);
       }

@@ -31,13 +31,12 @@
 }
 
 body {
-  width: 100vw;
   font-family: "Game of Thrones";
   background: var(--mainBackground);
   line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
-  overflow: auto;
+  overflow-y: scroll;
 }
 
 h1,
@@ -138,7 +137,6 @@ img {
 .navbar {
   background-color: var(--mainBackground);
   width: 100vw;
-  height: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -189,6 +187,18 @@ img {
   background-color: #393838ee;
 }
 
+@media screen and (max-width: 576px) {
+  .nav-bar {
+    height: 5rem;
+  }
+
+
+  .nav-center {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
 
 /* Error  */
 
@@ -222,7 +232,6 @@ img {
 
 .character-section {
   padding: 2rem;
-  transition: all 0.2s ease-in;
 }
 
 .section-title {
@@ -266,6 +275,8 @@ img {
 
 .character:hover {
   transform: scale(1.02);
+  box-shadow: rgba(197, 191, 3, 0.35) 0px 5px 15px;
+
 }
 
 .character img {
@@ -287,7 +298,8 @@ img {
 }
 
 .character-footer h4 {
-  color: var(--darkGrey);
+
+  color: var(--primaryColor);
   font-size: 0.9rem;
 }
 
@@ -296,8 +308,9 @@ img {
 }
 
 .character-footer p {
-  color: var(--primaryColor);
+  color: var(--darkGrey);
   font-size: 0.8rem;
+  letter-spacing: 2px;
   margin-bottom: 0.5rem;
 }
 
@@ -308,9 +321,8 @@ img {
 }
 
 .input-field {
-  max-width: 40vw;
+  width: 40%;
   height: 3rem;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -318,7 +330,7 @@ img {
   border-radius: var(--mainBorderRadius);
   margin: 0 auto;
   color: white;
-  box-shadow: rgba(168, 144, 48, 0.25) 0px 6px 12px -2px, rgba(228, 205, 56, 0.3) 0px 3px 7px -3px;
+  box-shadow: inset 0 0 10px #bbb9b5;
 }
 
 .search-input {
@@ -328,66 +340,30 @@ img {
   border: none;
   background-color: transparent;
   outline: none;
-  font-size: 1rem;
+  font-size: 1rem 0.5rem;
   letter-spacing: 2px;
   color: var(--offWhite)
 }
 
-
-/* 
-====== 
-Cocktail
-======
-*/
-
-.cocktail-section {
-  text-align: center;
+.input-field input::placeholder {
+  color: rgba(255, 255, 255, 0.543);
 }
 
-.drink {
-  width: var(--smallWidth);
-  max-width: var(--fullWidth);
-  margin: 0 auto;
-  text-align: left;
+.fa-magnifying-glass {
+  padding-right: 1rem;
 }
 
-.drink img {
-  border-radius: var(--mainBorderRadius);
-}
-
-.drink p {
-  font-weight: bold;
-  text-transform: capitalize;
-  line-height: 1.8;
-}
-
-.drink span {
-  margin-right: 0.5rem;
-}
-
-.drink-data {
-  background: var(--primaryLightColor);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--mainBorderRadius);
-  color: var(--primaryColor);
-}
-
-.drink-info {
-  padding-top: 2rem;
-}
-
-@media screen and (min-width: 992px) {
-  .drink {
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    gap: 3rem;
-    align-items: center;
+@media screen and (max-width: 576px) {
+  .search-section {
+    margin-top: 2rem;
   }
 
-  .drink-info {
-    padding-top: 0;
+  .input-field {
+    width: 80%;
   }
 }
+
+/* loading  */
 
 .loader,
 .loader:before,
@@ -429,9 +405,6 @@ Cocktail
 .loader:after {
   left: 1.5em;
 }
-
-
-
 
 @-webkit-keyframes load1 {
 

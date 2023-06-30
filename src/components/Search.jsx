@@ -9,7 +9,7 @@ const Search = () => {
     const newList = characters.filter((data) => {
       return data.fullName
         .toLowerCase()
-        .includes(searchRef.current.value.toLowerCase());
+        .startsWith(searchRef.current.value.toLowerCase());
     });
     setFilterData(newList);
   };
@@ -21,6 +21,7 @@ const Search = () => {
           className="search-input"
           ref={searchRef}
           onChange={searchCharacter}
+          placeholder="Search"
         />
         <i className="fa-solid fa-magnifying-glass"></i>
       </div>
