@@ -1,12 +1,8 @@
-import { Link, useParams } from 'react-router-dom';
 import Loading from '../../components/Loading';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import './detail.css';
 
 const Detail = () => {
-  const { id } = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [character, setCharacter] = useState(null);
   const url = 'https://thronesapi.com/api/v2/Characters/';
